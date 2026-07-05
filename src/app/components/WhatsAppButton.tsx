@@ -28,13 +28,10 @@ export function WhatsAppButton() {
 
 export function MobileStickyBar() {
   return (
-    <div
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden flex"
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
-    >
+    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden flex">
       <a
         href="tel:9535902255"
-        className="flex-1 flex items-center justify-center gap-2 py-4"
+        className="flex-1 flex items-center justify-center gap-2 pt-4"
         style={{
           background: "#284848",
           color: "#F4F5EF",
@@ -44,6 +41,7 @@ export function MobileStickyBar() {
           letterSpacing: "0.1em",
           textDecoration: "none",
           textTransform: "uppercase",
+          paddingBottom: "calc(1rem + env(safe-area-inset-bottom))",
         }}
       >
         <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -55,7 +53,7 @@ export function MobileStickyBar() {
         href="https://wa.me/919535902255?text=Hi%20Flutter%20Bee!%20I%27d%20like%20a%20free%20quote."
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-1 flex items-center justify-center gap-2 py-4"
+        className="flex-1 flex items-center justify-center gap-2 pt-4"
         style={{
           background: "#B5A96F",
           color: "#1B1C1B",
@@ -65,6 +63,7 @@ export function MobileStickyBar() {
           letterSpacing: "0.1em",
           textDecoration: "none",
           textTransform: "uppercase",
+          paddingBottom: "calc(1rem + env(safe-area-inset-bottom))",
         }}
       >
         <MessageCircle size={16} />

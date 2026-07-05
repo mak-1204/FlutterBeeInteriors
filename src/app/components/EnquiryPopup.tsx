@@ -94,28 +94,28 @@ export function EnquiryPopup() {
   return (
     <AnimatePresence>
       {visible && (
-        <>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[90] bg-black/60"
+            className="fixed inset-0 bg-black/60"
             onClick={dismiss}
           />
           {/* Modal */}
           <motion.div
-            initial={{ opacity: 0, y: 60, scale: 0.95 }}
+            initial={{ opacity: 0, y: 40, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 40, scale: 0.95 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[100] w-full max-w-md mx-4"
+            exit={{ opacity: 0, y: 30, scale: 0.96 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            className="relative z-10 w-full max-w-md max-h-[85vh] overflow-y-auto rounded-md shadow-2xl flex flex-col"
             style={{ background: "#284848" }}
           >
             {/* Gold top bar */}
-            <div style={{ height: "4px", background: "#B5A96F" }} />
+            <div style={{ height: "4px", background: "#B5A96F", flexShrink: 0 }} />
 
-            <div className="p-7 md:p-8">
+            <div className="p-6 md:p-8">
               {/* Close */}
               <button
                 onClick={dismiss}
@@ -125,7 +125,7 @@ export function EnquiryPopup() {
                 <X size={20} />
               </button>
 
-              <div className="mb-5">
+              <div className="mb-5 pr-4">
                 <p
                   style={{
                     fontFamily: "'Jost', sans-serif",
@@ -242,7 +242,7 @@ export function EnquiryPopup() {
               </form>
             </div>
           </motion.div>
-        </>
+        </div>
       )}
     </AnimatePresence>
   );
