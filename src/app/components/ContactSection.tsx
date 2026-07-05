@@ -39,7 +39,7 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(
-      `Hi Flutter Bee Interiors! 🦋\n\nName: ${form.name}\nPhone: ${form.phone}\nArea: ${form.area}\nProject: ${form.projectType}\nBudget: ${form.budget}\n\nMessage: ${form.message || "Please contact me for a consultation."}`
+      `Hi Flutter Bee Interiors! 🦋\n\nName: ${form.name}\nPhone: ${form.phone}\nArea: ${form.area}\nProject: ${form.projectType || 'Not specified'}\nBudget: ${form.budget || 'Not specified'}\n\nMessage: ${form.message || "Please contact me for a consultation."}`
     );
     window.open(`https://wa.me/919535902255?text=${msg}`, "_blank");
     setSent(true);

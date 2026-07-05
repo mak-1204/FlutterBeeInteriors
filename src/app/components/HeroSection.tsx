@@ -10,7 +10,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-end overflow-hidden"
+      className="relative min-h-screen flex items-center md:items-end overflow-hidden"
       style={{ background: "#1B1C1B" }}
     >
       {/* Background image */}
@@ -42,7 +42,7 @@ export function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-20 md:pb-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16 md:pt-0 md:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

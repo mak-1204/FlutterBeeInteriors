@@ -10,32 +10,40 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4">
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: "1.5rem",
-                  fontWeight: 600,
-                  color: "#B5A96F",
-                  letterSpacing: "0.08em",
-                  display: "block",
-                  lineHeight: 1,
-                }}
-              >
-                FLUTTER BEE
-              </span>
-              <span
-                style={{
-                  fontFamily: "'Jost', sans-serif",
-                  fontSize: "0.58rem",
-                  fontWeight: 400,
-                  color: "rgba(244,245,239,0.5)",
-                  letterSpacing: "0.36em",
-                  textTransform: "uppercase",
-                }}
-              >
-                INTERIORS
-              </span>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/logo.png"
+                alt="Flutter Bee Interiors Logo"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+              <div className="flex flex-col items-start pt-0.5">
+                <span
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "1.5rem",
+                    fontWeight: 600,
+                    color: "#B5A96F",
+                    letterSpacing: "0.08em",
+                    lineHeight: 1,
+                  }}
+                >
+                  FLUTTER BEE
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'Jost', sans-serif",
+                    fontSize: "0.58rem",
+                    fontWeight: 400,
+                    color: "rgba(244,245,239,0.5)",
+                    letterSpacing: "0.36em",
+                    textTransform: "uppercase",
+                    lineHeight: 1,
+                    marginTop: "0.15rem",
+                  }}
+                >
+                  INTERIORS
+                </span>
+              </div>
             </div>
             <p
               style={{

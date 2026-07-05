@@ -32,17 +32,26 @@ export function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
           background: scrolled ? "rgba(40,72,72,0.97)" : "transparent",
-          backdropFilter: scrolled ? "blur(12px)" : "none",
+          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+          WebkitBackdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
           boxShadow: scrolled ? "0 2px 24px rgba(27,28,27,0.18)" : "none",
+          transform: "translateZ(0)",
+          WebkitFontSmoothing: "antialiased",
+          paddingTop: "env(safe-area-inset-top)",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <button
             onClick={() => handleNav("#home")}
-            className="flex items-center gap-2 focus:outline-none"
+            className="flex items-center gap-2.5 focus:outline-none"
           >
-            <div className="flex flex-col leading-none">
+            <img
+              src="/logo.png"
+              alt="Flutter Bee Interiors Logo"
+              className="h-9 md:h-11 w-auto object-contain"
+            />
+            <div className="flex flex-col items-start pt-1">
               <span
                 style={{
                   fontFamily: "'Cormorant Garamond', serif",
@@ -63,7 +72,9 @@ export function Navbar() {
                   color: "#F4F5EF",
                   letterSpacing: "0.32em",
                   textTransform: "uppercase",
-                  lineHeight: 1.6,
+                  lineHeight: 1,
+                  marginTop: "0.15rem",
+                  marginLeft: "0.1rem",
                 }}
               >
                 INTERIORS
